@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or its results, please cite it as below."
+type: software
+title: "Does the Payout–Leverage Relationship Vary with the Interest Rate Regime? Analysis pipeline"
+abstract: >-
+  The empirical pipeline of a master's thesis in Quantitative Finance (Faculty of Economic Sciences,
+  University of Warsaw). It builds a panel of 140 US non-financial industries over 1999-2025 from
+  Aswath Damodaran's industry datasets and FRED, checks and corrects the data, and estimates two-way
+  fixed-effects models of payout on leverage and its interaction with the interest-rate regime, with
+  bounds for the null results, robustness and multiple-testing checks. It is tested on synthetic data
+  with planted effects and planted data defects.
+authors:
+  - family-names: "Kalajdžić"
+    given-names: "Milan"
+    affiliation: "University of Warsaw, Faculty of Economic Sciences"
+version: "1.2.0"
+date-released: "2026-10-12"
+license: MIT
+repository-code: "https://github.com/MilanKalajdzic/payout-leverage-rate-regimes"
+keywords:
+  - dividend policy
+  - capital structure
+  - interest rates
+  - panel data
+  - fixed effects
+  - corporate finance
