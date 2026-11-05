@@ -1,6 +1,6 @@
 # Does the Payout–Leverage Relationship Vary with the Interest Rate Regime?
 
-[![tests](https://github.com/MilanKalajdzic/Master-Thesis/actions/workflows/tests.yml/badge.svg)](https://github.com/MilanKalajdzic/Master-Thesis/actions/workflows/tests.yml)
+[![tests](https://github.com/MilanKalajdzic/payout-leverage-rate-regimes/actions/workflows/tests.yml/badge.svg)](https://github.com/MilanKalajdzic/payout-leverage-rate-regimes/actions/workflows/tests.yml)
 [![python](https://img.shields.io/badge/python-3.10%20%E2%80%93%203.14-3776ab)](pyproject.toml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-2a78d6)](LICENSE)
 
@@ -30,7 +30,7 @@ so every number can be reproduced from scratch, and the pipeline is tested on fa
 [H2](#h2-a-bounded-null) · [other leverage measures](#other-leverage-measures) · [H3](#h3-not-supported) ·
 [H1 and dividend smoothing](#h1-and-dividend-smoothing) · [Data quality](#data-quality) ·
 [Design decisions](#design-decisions-and-why) · [Setup](#setup-and-reproduce) · [Tests](#tests) ·
-[Layout](#repository-layout) · [Limitations](#limitations)
+[Layout](#repository-layout) · [Limitations](#limitations) · [Citation](#citation)
 
 ## Short version
 
@@ -441,8 +441,8 @@ new download with a new problem shows up in the tables but is not fixed automati
 Linux or macOS:
 
 ```bash
-git clone https://github.com/MilanKalajdzic/Master-Thesis.git
-cd Master-Thesis
+git clone https://github.com/MilanKalajdzic/payout-leverage-rate-regimes.git
+cd payout-leverage-rate-regimes
 python3 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev]"        # the package in src/, plus notebook and test tools
 .venv/bin/python -m pytest                         # under a minute, on fake data: no downloads needed
@@ -456,8 +456,8 @@ Windows (PowerShell), with Python from [python.org](https://www.python.org/downl
 numpy, scipy and pandas from PyPI's Windows packages, and pip ends up trying to compile them.
 
 ```powershell
-git clone https://github.com/MilanKalajdzic/Master-Thesis.git
-cd Master-Thesis
+git clone https://github.com/MilanKalajdzic/payout-leverage-rate-regimes.git
+cd payout-leverage-rate-regimes
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 .\.venv\Scripts\python.exe -m pytest
@@ -532,6 +532,7 @@ pyproject.toml               the package, its dependencies and the dev/fred extr
 requirements.txt             the same install, for pip install -r
 requirements-lock.txt        exact versions behind the committed outputs
 LICENSE                      MIT
+CITATION.cff                 how to cite the repository (GitHub's "Cite this repository")
 ```
 
 ## Limitations
@@ -549,6 +550,22 @@ LICENSE                      MIT
 - The data are Damodaran's industry aggregates as published, with the fixes above; a problem no check covers
   may remain.
 - Identification is associational, not causal.
+
+## Citation
+
+If you use the code or the results, please cite them. [`CITATION.cff`](CITATION.cff) holds the reference, and
+GitHub turns it into APA and BibTeX under **Cite this repository** on the repository page:
+
+```bibtex
+@software{kalajdzic_payout_leverage_2026,
+  author  = {Kalajd{\v{z}}i{\'c}, Milan},
+  title   = {Does the Payout--Leverage Relationship Vary with the Interest Rate Regime? Analysis pipeline},
+  year    = {2026},
+  version = {1.2.0},
+  url     = {https://github.com/MilanKalajdzic/payout-leverage-rate-regimes},
+  note    = {Master's thesis pipeline, Faculty of Economic Sciences, University of Warsaw}
+}
+```
 
 ## License and data
 
